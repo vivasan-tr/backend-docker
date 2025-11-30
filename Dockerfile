@@ -1,11 +1,11 @@
 # Development Dockerfile for Medusa
-FROM node:20-alpine
+FROM node:22-alpine
 
 # Set working directory
 WORKDIR /server
 
 # Copy package files and yarn config
-COPY package.json yarn.lock .yarnrc.yml ./
+COPY package.json .yarnrc.yml ./
 
 # Install all dependencies using yarn
 RUN yarn install
